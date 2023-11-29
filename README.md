@@ -310,13 +310,14 @@ A média das notas de Carla é 9.52
 Implemente os métodos `coletarInformacoes` e `emitirRelatorio` contidos na
 classe `Portaria`.
 
-O método `coletarInformacoes` realiza a leitura da idade de todas as pessoas estudantes que acessam a escola pela portaria. Já o método `emitirRelatorio` informa o total de pessoas estudantes divididas nas categorias Ensino Fundamental I, Ensino Fundamental II e Ensino Médio. Em outras palavras:
+O método `coletarInformacoes` deve realizar a leitura da idade de todas as pessoas estudantes que acessam a escola pela portaria. Já o método `emitirRelatorio` informa o total de pessoas estudantes divididas nas categorias Ensino Fundamental I, Ensino Fundamental II e Ensino Médio. Em outras palavras:
 
 1. Ao iniciar a aplicação e a opção 3 for escolhida, o método `coletarInformacoes` da
-   classe `Portaria`será chamado.
-2. **Contabilizar a idade das pessoas estudantes no sistema:** essa etapa se repete até que a opção de finalizar acessos seja escolhida. É importante frisar que nesta etapa, a idade deve ser apenas contabilizada para fins estatísticos ou de registro, sem a necessidade de armazenamento em um array ou qualquer outra estrutura de dados. O foco é no processo de contagem e registro do número total, e não no armazenamento individual das idades.
+   classe `Portaria`será chamado na nossa classe principal (App).
 
-3. **Finalizar o sistema e mostrar o relatório:** nessa etapa, o laço de repetição deve ser terminado e então o relatório deve ser impresso no console. O relatório deve conter o total de pessoas estudantes que acessaram a escola através da portaria, e também o número de pessoas estudantes do ensino fundamental I (de 6 a 10 anos), o número de pessoas estudantes do ensino fundamental II (de 11 a 14 anos) e o número de pessoas estudantes do ensino médio (a partir de 15 anos). O relatório também deve calcular, em relação ao total de pessoas estudantes, a porcentagem delas por categoria de ensino.
+2. O método `coletarInformacoes` deve **receber como entrada a idade das pessoas estudantes:** essa etapa se repete até que a opção de finalizar acessos seja escolhida. É importante frisar que nesta etapa, a idade deve ser apenas contabilizada para fins estatísticos ou de registro, sem a necessidade de armazenamento em um array ou qualquer outra estrutura de dados. O foco é no processo de contagem e registro do número total de pessoas em cada nível de ensino (fundamental 1, 2 e médio), e não no armazenamento individual das idades.
+
+3. **Finalizar o sistema e mostrar o relatório:** nessa etapa, o relatório deve ser impresso no console (método `emitirRelatorio`). O relatório deve conter o total de pessoas estudantes que acessaram a escola através da portaria, e também o número de pessoas estudantes do ensino fundamental I (de 6 a 10 anos), o número de pessoas estudantes do ensino fundamental II (de 11 a 14 anos) e o número de pessoas estudantes do ensino médio (a partir de 15 anos). O relatório também deve calcular, em relação ao total de pessoas estudantes, a porcentagem delas por categoria de ensino.
 
 A imagem abaixo mostra o fluxo que o programa deve seguir:
 
@@ -330,7 +331,7 @@ Entre com o número correspondente à opção desejada:
 2 - Finalizar o acesso e emitir o relatório
 ```
 
-Se a opção 1 for escolhida, então a mensagem `Entre com a idade da pessoa estudante:` será impressa no console. Em seguida, após inserir a idade da pessoa estudante e pressionar enter, aparecerá uma das mensagens listadas abaixo:
+Se a opção 1 for escolhida no método `coletarInformacoes`, então a mensagem `Entre com a idade da pessoa estudante:` será impressa no console. Em seguida, após inserir a idade da pessoa estudante e pressionar enter, aparecerá uma das mensagens listadas abaixo:
 
 - `Pessoa estudante do Ensino Fundamental I, catraca liberada!`: se a idade da pessoa inserida for menor ou igual a 10 anos.
 
@@ -338,7 +339,7 @@ Se a opção 1 for escolhida, então a mensagem `Entre com a idade da pessoa est
 
 - `Pessoa estudante do Ensino Médio, catraca liberada!`: se a idade da pessoa inserida for maior ou igual a 15 anos.
 
-Depois que a mensagem for impressa, então deverá retornar ao estado inicial do menu. Supondo que a idade da primeira pessoa seja 18 anos, um exemplo do conteúdo do console depois de inserir a idade da primeira pessoa cliente será:
+Depois que a mensagem for impressa, devemos retornar ao estado inicial do menu. Supondo que a idade da primeira pessoa seja 18 anos, um exemplo do conteúdo do console após inserir a idade da primeira pessoa cliente será:
 
 ```bash
 Entre com o número correspondente à opção desejada:
@@ -354,8 +355,6 @@ Entre com o número correspondente à opção desejada:
 ```
 
 Esse ciclo se repete até a opção 2 ser escolhida, o que indica que os acessos foram finalizados e o relatório deve ser emitido.
-
-⚠️🔴**DICA: use uma variável do tipo `short` para armazenar a opção escolhida, já que é um valor numérico de pequena escala.** 🔴⚠️
 
 O relatório deve ser impresso no console quando a opção 2 for selecionada. Supondo que 200 pessoas estudantes acessaram a escola, o relatório deve conter as seguintes informações:
 
