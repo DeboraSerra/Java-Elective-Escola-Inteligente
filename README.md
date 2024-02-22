@@ -392,10 +392,10 @@ TOTAL: 200
 
 ### Restrições
 
-- O valor percentual deve ter duas casas decimais, exceto se for zero, então pode ser apenas uma casa decimal, como exposto no exemplo acima.
+- O valor percentual deve ter uma casa decimal, como exposto no exemplo acima.
 - Caso a opção inserida seja um valor diferente de 1 ou de 2, a mensagem `Entre com uma opção válida!` deve ser impressa no console, e o menu voltar para o estado inicial.
 
-⚠️🔴**DICA: para fazer com que o valor do tipo `float` ou `double` tenha apenas duas casas decimais, pesquise sobre a classe `DecimalFormat`.** 🔴⚠️
+⚠️🔴**DICA: para fazer com que o valor do tipo `float` ou `double` tenha apenas uma casa decimal, pesquise sobre o método `format` da classe `String`.** 🔴⚠️
 
 </details>
 
