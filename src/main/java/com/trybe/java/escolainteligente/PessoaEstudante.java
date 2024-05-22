@@ -8,14 +8,21 @@ public class PessoaEstudante {
    * Método calcularIdadeEmDias.
    */
   public static int calcularIdadeEmDias(int anos, int meses, int dias) {
-    System.out.println("TODO: Implementar a função calcular Idade em Dias.");
-    return 0;
+    int yearsInDays = anos * 365;
+    int monthsInDays = meses * 30;
+    return yearsInDays + monthsInDays + dias;
   }
 
   /**
    * Método coletarInformacoes.
    */
   public static void coletarInformacoes() {
-    System.out.println("TODO: Solicitar informações da Pessoa Estudante ");
+    Scanner scanner = new Scanner(System.in);
+    String name = scanner.next();
+    int years = Integer.parseInt(scanner.next());
+    int months = Integer.parseInt(scanner.next());
+    int days = Integer.parseInt(scanner.next());
+    int ageInDays = PessoaEstudante.calcularIdadeEmDias(years, months, days);
+    System.out.println("A idade de " + name + " em dias é " + ageInDays + ".");
   }
 }
